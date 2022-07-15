@@ -1,0 +1,13 @@
+Source code for generating and analyzing data from Xanadu's X8 chip for initializing two mode squeezed vacuum states and measuring them with photon number resolving detectors.
+
+The file Create_TMSV_data_GH.ipynb is a Jupyter notebook that accesses the remote engine through Strawberry Fields, creates the program, then submits the program a desired number of times to the engine. The program consists of four pairs of two mode squeezed vacuum states initialized with squeezing parameter r=1 which then have their numbers of photons counted, repeated 1000000 times. This file then counts the number of instances in which each photon number distribution is measured for each pair of modes and records this histogram, one histogram for each pair of modes and each time the program is run.
+
+The data are stored in the repository TMSV_data.
+
+The file Total_counts_GH.ipynb is a Jupyter notebook that estimates transmission parameters from the aggregated data. It can also be used to estimate the squeezing strength and dark counts.
+
+The file Parameter_opt_from_TMSV_data_5param_GH.ipynb is a Jupyter notebook that estimates all of the parameters from the data for each trial individually, then runs statistics on these data. These data are stored in the four files MLE_estimates04_5par.csv, MLE_estimates15_5par.csv, MLE_estimates26_5par.csv, and MLE_estimates37_5par.csv.
+
+The file ML_covariance_Rehacek_changing_r_dark_fixed_modes.nb is a Mathematica notebook that estimates the covariances in the estimates from the maximum likelihood estimation performed on the aggregated data.
+
+The file intersection_QFI_classical.nb is a Mathematica notebook that finds the intersection points between the QFI for classical states and various estimation techniques.
